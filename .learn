@@ -1,5 +1,7 @@
 tags:
-  - tag1
+  - capybara
+  - rspec
+  - tdd
 languages:
-  - language1
+  - ruby
 resources: 0
