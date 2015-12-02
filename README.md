@@ -430,3 +430,5 @@ We learned about:
 6. A simple Sinatra Form Application - We also built a simple Sinatra application that has two routes, a GET and a POST, displaying a form, accepting the form input, and sending a dynamic response.
 
 Great job!
+
+<a href='https://learn.co/lessons/intro-to-capybara' data-visibility='hidden'>View this lesson on Learn.co</a>
