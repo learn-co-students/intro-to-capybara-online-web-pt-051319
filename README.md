@@ -1,15 +1,17 @@
 # Intro To Capybara
 
+## Overview
+
+In this lesson, we'll discuss integration testing with Capybara.
+
 ## Objectives
 
-1. Understand what an integration test is compared to unit and controller tests.
-2. Understand how to read a Capybara test of response HTML.
-3. Understand how to read a Capybara test that interacts with HTML.
-4. Understand how to read a Capybara test that submits an HTML form.
-
-### Advanced Concept Warning
-
-First, Integration Testing and Capybara are very advanced topics in code and it's super awesome amazing that you're reading about it! It's okay if not everything in this lesson makes total sense, we're just trying to introduce you to as much of modern application development as possible. Since we write a lot of our Sinatra and Rails web application tests for Learn using RSpec and Capybara, we thought it might just be helpful to give you some context with which to read the tests and their output. You're awesome, we love you.
+1. Define an integration test and compare it to unit and controller tests.
+2. Use Capybara for integration tests by including it in the testing environment
+3. Use specific Capybara methods- `visit` and `page`- when writing tests
+4. Read a Capybara test of response HTML.
+5. Read a Capybara test that interacts with HTML.
+6. Read a Capybara test that submits an HTML form.
 
 ## The MVC Framework
 
@@ -17,19 +19,15 @@ There are three basic levels of testing that correspond to the different levels 
 
 ![Web Application Stack and Tests](https://dl.dropboxusercontent.com/s/k2ypcn86btb6ajo/2015-09-29%20at%204.14%20PM.png)
 
-Don't worry if you don't know exactly what a model or a controller or a view are, you probably don't need too in-depth of an understanding to continue this lesson and learn a bit about Capybara. If you're curious, the following definitions should be enough for now:
-
 **Database:** Databases persist or save data from our application. 
 
 **Models:** Models provide an object-oriented abstraction or metaphor for the data in our application. Our models do the job of interacting with the database for us. Our model can talk to the database by asking for certain data and using that data to create a new instance of our class. We can then interact with that data by using the methods and properties of the instance of that class. 
 
-You've likely built some models already, even if they haven't interacted with a database. A model can be any class that represents real-world data or environments. For example a `Person` class or a `Dog` class. 
-
 **Controllers:** Controllers provide the main interface and application logic. They deal with things like: "What data should I show a user in response to certain input from that user" or "What HTML should be sent to the user when they visit the /about page?". In large scale MVC applications, controllers are represented by classes, but really, lots of `bin` files could be considered controllers.
 
-**Views:** Views present information to the user. Any code that is responsible for presenting data or output to the user, from methods that use a bunch of `puts`, to HTML, to ERB templates, could be considered a View. In Web Applications, Views are generally represented by ERB templates that generate HTML.
+**Views:** Views present information to the user. Any code that is responsible for presenting data or output to the user, from methods that use a bunch of `puts`, to HTML, to ERB templates, could be considered a View. In web applications, Views are generally represented by ERB templates that generate HTML.
 
-**User/Browser:** The top of our application pyramid is finally the user. Whether describing the person using our application, the interface they use such as a Command Line, Voice, or HTML, or the program they use to even access our application, such as a Browser like Chrome or Safari, or a Native app, our application is responsible for delivering the user an experience on some sort of pre-existing platform.
+**User/Browser:** The top of our application pyramid is finally the user. Whether describing the people using our application, the interface they use such as a Command Line, Voice, or HTML, or the program they use to even access our application, such as a Browser like Chrome or Safari, or a Native app, our application is responsible for delivering the user an experience on some sort of pre-existing platform.
 
 #### Basic MVC Flow
 
@@ -53,9 +51,9 @@ Controller tests test that the code responsible for delivering the appropriate d
 
 ### Integration Tests
 
-Integration tests are the highest-level of test, they are closest to describing how a user will actually interact with our application. Commonly referred to as End-To-End Tests, Integration tests should flex your entire application stack (i.e. all of the MVC components) and rarely isolate components or behaviors. They are perfect for spec'ing high level user interactions with HTML and forms. We're going to be learning how to write and read an integration test using a library called Capybara within an RSpec test suite.
+Integration tests are the highest-level of test, and they are closest to describing how a user will actually interact with our application. Commonly referred to as End-To-End Tests, Integration tests should flex your entire application stack (i.e. all of the MVC components) and rarely isolate components or behaviors. They are perfect for spec'ing high level user interactions with HTML and forms. We're going to be learning how to write and read an integration test using a library called Capybara within an RSpec test suite.
 
-*Note: You will generally not be required to write tests in Learn. However, you will be required to read a test and understand what functionality the test suite is anticipating and testing. If you can write a test, we believe you can read a test.*
+*Note: While you will generally not be required to write tests in Learn, you will be required to read a test and understand what functionality the test suite is anticipating and testing. If you can write a test, we believe you can read a test.*
 
 ## Integration Testing with Capybara
 
@@ -224,7 +222,7 @@ If you an error output, don't worry, read it and see if you can figure out what'
 
 #### Passing the Second Test: Adding the Greeting Form Requirement
 
-Great, step 1, get a basic test and application working, is done! Let's now add tests for the HTML form that will allow a user to provide their name for the greeting. When our tests pass, our form at `/` will look like:
+Great, step 1, get a basic test and application working, is done! Let's now add tests for the HTML form that will allow users to provide their name for the greeting. When our tests pass, our form at `/` will look like:
 
 ![Form](https://dl.dropboxusercontent.com/s/1zocl86jv9qguth/2015-09-29%20at%206.00%20PM%20%281%29.png)
 
