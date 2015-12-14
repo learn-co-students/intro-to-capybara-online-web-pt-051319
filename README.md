@@ -304,7 +304,7 @@ Edit: `views/index.erb`
 </form>
 ```
 
-Don't worry about the specifics of the HTML form, but know that it is building an HTML form that when submitted by the user clicking on the Submit button, will create an HTTP POST request to `/greet`, submitting whatever the user typed into the form text `<input>` field nested in the form that happens to be `name`d `user_name` (I know confusing, but it's `name` attribute is equal to `user_name`).
+Don't worry about the specifics of the HTML form, but know that it is building an HTML form that when submitted by the user clicking on the Submit button, will create an HTTP POST request to `/greet`, submitting whatever the user typed into the form text `<input>` field nested in the form that happens to be `name` and `user_name` (I know confusing, but it's `name` attribute is equal to `user_name`).
 
 Run your tests now or reload your browser and you should see the form and your tests passing.
 
