@@ -254,8 +254,8 @@ Our new test has a similar setup to the first test, we need to tell Capybara to 
 
 Where does this magic `have_selector` matcher come from? That's right, Capybara has added that to RSpec. Capybara `page` objects respond to methods that relate intimately to HTML and the DOM (Document Object Model) that defines web applications. You can literally ask the `page` object: "hey, do you have HTML that matches the following selector?" Pretty amazing, right?
 
-The second expectation is similar, `expect(page).to have_field(:user_name)
-`. We're saying that we expect the `page` to have a form field called `user_name`. We get to be even more semantic with the `have_field` matcher that will make sure the HTML in `page` contains a form input with either an `ID` or `name` attribute that matches the argument, in this case `:user_name`.
+The second expectation is similar, `expect(page).to have_field(:user_name)`
+. We're saying that we expect the `page` to have a form field called `user_name`. We get to be even more semantic with the `have_field` matcher that will make sure the HTML in `page` contains a form input with either an `ID` or `name` attribute that matches the argument, in this case `:user_name`.
 
 After editing the integration test and saving it, if we run our tests according to the current code, we'll see:
 
@@ -304,7 +304,7 @@ Edit: `views/index.erb`
 </form>
 ```
 
-Don't worry about the specifics of the HTML form, but know that it is building an HTML form that when submitted by the user clicking on the Submit button, will create an HTTP POST request to `/greet`, submitting whatever the user typed into the form text `<input>` field nested in the form that happens to be `name`d `user_name` (I know confusing, but it's `name` attribute is equal to `user_name`).
+Don't worry about the specifics of the HTML form, but know that it is building an HTML form that when submitted by the user clicking on the Submit button, will create an HTTP POST request to `/greet`, submitting whatever the user typed into the form text `<input>` field nested in the form that happens to be `name` and `user_name` (I know confusing, but it's `name` attribute is equal to `user_name`).
 
 Run your tests now or reload your browser and you should see the form and your tests passing.
 
