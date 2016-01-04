@@ -341,7 +341,7 @@ Then we use the Capybara method `fill_in` to fill in the input field `user_name`
 
 Finally, we `click_button "Submit"` to submit the form. That HTML interaction, submitting a form, will trigger a new HTTP request in the Capybara session and `page` object. 
 
-Just like when you submit a form, the browser loads a new page and you see new content, when Capybara submits a form, just like when we call `visit`, the `page` object is appropriately updated. `page` no longer contains the original greeting form, but rather, after `click_button`, `page` now has the response to the greeting form.
+Just like when you submit a form, the browser loads a new page and you see new content. When Capybara submits a form, just like when we call `visit`, the `page` object is appropriately updated. `page` no longer contains the original greeting form, but rather, after `click_button`, `page` now has the response to the greeting form.
 
 For the response to submitting the greeting form, we can `expect` the `page` to `have_text` `"Hi Avi, nice to meet you!"`. The user filled in their user_name as "Avi", the resulting greeting should mention that. `have_text` is another really friendly and semantic Capybara matcher for testing HTML text value explicitly.
 
