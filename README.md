@@ -429,4 +429,4 @@ We learned about:
 
 Great job!
 
-<a href='https://learn.co/lessons/intro-to-capybara' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-capybara' title='Intro To Capybara'>Intro To Capybara</a> on Learn.co and start learning to code for free.</p>
