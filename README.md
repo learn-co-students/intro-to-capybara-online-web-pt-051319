@@ -218,7 +218,7 @@ Finished in 0.03438 seconds (files took 0.43261 seconds to load)
 1 example, 0 failures
 ```
 
-If you an error output, don't worry, read it and see if you can figure out what's going on and fix it. If not, just move on, **this lesson is about understanding how to read a Capybara test**, not write them or debug them.
+If you receive an error output, don't worry, read it and see if you can figure out what's going on and fix it. If not, just move on, **this lesson is about understanding how to read a Capybara test**, not write them or debug them.
 
 #### Passing the Second Test: Adding the Greeting Form Requirement
 
@@ -430,3 +430,5 @@ We learned about:
 Great job!
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-capybara' title='Intro To Capybara'>Intro To Capybara</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/intro-to-capybara'>Intro to Capybara Tests</a> on Learn.co and start learning to code for free.</p>
