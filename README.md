@@ -121,7 +121,7 @@ It is exactly these sort of behaviors, conditions, and expectations that Capybar
 
 ## Testing our Application
 
-Now that our test suite is setup to use Capybara, let's start writing some tests for our application. **All of the code we will review below is already present in this repo. You can fork and clone this repo to take a closer look, or you can rebuild this simple app on your own as we review it together, below.**
+Now that our test suite is setup to use Capybara, let's start writing some tests for our application.
 
 ### `GET '/'` 
 
@@ -428,7 +428,5 @@ We learned about:
 6. A simple Sinatra Form Application - We also built a simple Sinatra application that has two routes, a GET and a POST, displaying a form, accepting the form input, and sending a dynamic response.
 
 Great job!
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-capybara' title='Intro To Capybara'>Intro To Capybara</a> on Learn.co and start learning to code for free.</p>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/intro-to-capybara'>Intro to Capybara Tests</a> on Learn.co and start learning to code for free.</p>
