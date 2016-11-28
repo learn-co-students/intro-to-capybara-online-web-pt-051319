@@ -6,3 +6,5 @@ gem 'sinatra'
 
 gem 'rspec'
 gem 'capybara'
+
+gem 'learn-co'
