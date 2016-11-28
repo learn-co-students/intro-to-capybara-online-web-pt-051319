@@ -218,6 +218,8 @@ Finished in 0.03438 seconds (files took 0.43261 seconds to load)
 1 example, 0 failures
 ```
 
+>Note: If you're getting an error about conflicting gems, you may need to run `bundle exec rspec` (or `bundle exec learn`). Prepending a command with `bundle exec` forces your terminal to run the process with the version of the gems specified in the gem file rather than just using the most recent versions on your machine. 
+
 If you receive an error output, don't worry, read it and see if you can figure out what's going on and fix it. If not, just move on. **This lesson is about understanding how to read a Capybara test**; not how to write or debug them.
 
 #### Passing the Second Test: Adding the Greeting Form Requirement
