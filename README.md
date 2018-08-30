@@ -35,11 +35,14 @@ Let's take a look at how it all fits together. We'll use an example of a social 
 
 1. The user interacts with our application's view(s) via the command line or a web browser. The user enters some input that asks our application to show them a list of all of their friends who are using the application.
 2. The controller receives this request and looks at it. The controller says, "Okay, this user wants to see a list of their friends."
-3. The controller then asks the `Friends` model to go into the database and return all of the user's friends.
+3. The controller then asks the `Friend` model to go into the database and return all of the user's friends.
 4. The model goes to the database, retrieves all of the requested data, and gives it to the controller.
 5. The controller passes that data to a view, and the view displays it to the user.
 
 ## The Three Levels of Testing
+
+
+Refer to the graphic. Each MVC layer is associated with a type of test: Models to Unit; Controllers to Controller; Views to Integration. Just as the MVC layers higher up make use of the MVC layers lower down the pyramid, testing at higher layers will also "exercise" or "flex" the layers lower down. Consider that if you want to test a user's perspective by browsing to a page and performing some action (say, subscribing to a newsletter) you're going to test views ("Is there a field for adding my email address?") )_explicitly_, but _also_ implicitly test the Controller ("Did my submit button click POST to `subscribers#create`") as well as the Model ("Is the number of `Subscriber` instances 1 larger than it was _before_ I made this request?")
 
 ### Unit Tests
 
