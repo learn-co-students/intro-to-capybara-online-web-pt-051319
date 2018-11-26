@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rack', '1.6.5'
+gem 'rack'
 gem 'sinatra'
 gem 'shotgun'
 
