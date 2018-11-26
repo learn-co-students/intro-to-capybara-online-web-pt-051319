@@ -241,7 +241,24 @@ Our test is telling Capybara to visit the `/` URL. It then sets the expectation
 that the body of the page returned should include at least the text `Welcome!`
 somewhere.
 
-#### Passing the First Test
+### Passing the First Test
+
+File: `./config.ru`
+
+```ruby
+require 'sinatra'
+
+require_relative './app'
+
+run Application
+```
+
+In a basic application like this example, our `config.ru` `require`s the
+`sinatra` gem. It then `require_relative`s the required file `app.rb` that
+defines our main `Application` controller. Finally, we `run` our `Application`
+controller to start our web application. When we run `shotgun`, the gem will
+look for a `config.ru` file if no other file is specified. This file acts as the
+entry point for starting up your application.
 
 File: `./app.rb`
 
@@ -283,21 +300,6 @@ read to start your local application server, and it's also the file our test
 suite is using to define our application –– remember
 `Rack::Builder.parse_file('config.ru').first`?
 
-File: `./config.ru`
-
-```ruby
-require 'sinatra'
-
-require_relative './app'
-
-run Application
-```
-
-In a basic application like this example, our `config.ru` `require`s the
-`sinatra` gem. It then `require_relative`s the required file `app.rb` that
-defines our main `Application` controller. Finally, we `run` our `Application`
-controller to start our web application.
-
 If we now start our application with `shotgun` and open `http://localhost:9393`
 in our browser, we'll see our welcome message.
 
@@ -324,7 +326,7 @@ If you receive an error output, don't worry, read it and see if you can figure
 out what's going on and fix it. If not, just move on. **This lesson is about
 understanding how to read a Capybara test**; not how to write or debug them.
 
-#### Passing the Second Test: Adding the Greeting Form Requirement
+### Passing the Second Test: Adding the Greeting Form Requirement
 
 Great, step 1, to get a basic test and application working, is done! Let's now
 add tests for the HTML form that will allow users to provide their name for the
