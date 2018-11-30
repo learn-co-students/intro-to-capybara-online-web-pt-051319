@@ -598,3 +598,4 @@ We learned about:
 Great job!
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/intro-to-capybara'>Intro to Capybara Tests</a> on Learn.co and start learning to code for free.</p>
+
