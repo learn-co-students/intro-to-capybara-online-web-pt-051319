@@ -1,1 +1,19 @@
 <%# Write your code here! %>
+<%# <!DOCTYPE html>
+<html>
+  <head>Welcome!</head>
+  <body>
+    <h1>If you tell me your name, I can say hi!</h1>
+  </body>
+</html> %>
+
+<%# second test, has a greeting form with a user_name field %>
+<h1>Welcome!</h1> 
+ 
+<form action="/greet" method="POST">
+  <label for="user_name">Name:</label>
+ 
+  <p><input type="text" name="user_name" id="user_name" /></p>
+ 
+  <input type="submit" value="Submit"/>
+</form>
