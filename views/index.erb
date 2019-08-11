@@ -1,1 +1,17 @@
 <%# Write your code here! %>
+<!DOCTYPE html> 
+
+<html>
+  <head><h1>Welcome!</h1></head>
+  <body>
+    <p>If you tell me your name, I can say hi! </p>
+    
+    <form action="/greet" method="POST">
+  <label for="user_name">Name:</label>
+ 
+  <p><input type="text" name="user_name" id="user_name" /></p>
+ 
+  <input type="submit" value="Submit"/>
+</form>
+  </body>
+</html>
