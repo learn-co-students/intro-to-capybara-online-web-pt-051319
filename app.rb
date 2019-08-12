@@ -1,4 +1,7 @@
 class Application < Sinatra::Base
-  # Write your code here!
 
+	attr_accessor = :name
+
+	get('/'){ erb :index }
+	post('/greet'){ erb :greet }
 end
