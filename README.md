@@ -194,10 +194,10 @@ We want our root path to show our greeting form:
 
 ![Form](https://dl.dropboxusercontent.com/s/1zocl86jv9qguth/2015-09-29%20at%206.00%20PM%20%281%29.png)
 
-So, we want to write a test that checks that the `get '/'` route brings the user
+We want to have a test that checks that the `get '/'` route brings the user
 to that page.
 
-Let's write this test in `spec/application_integration_spec.rb`.
+Look at this test in `spec/application_integration_spec.rb`.
 
 File: `spec/application_integration_spec.rb`
 
